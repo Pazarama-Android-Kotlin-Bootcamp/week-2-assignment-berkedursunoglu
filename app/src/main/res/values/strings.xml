@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FigmaExample</string>
+    <string name="welcome_to_bauss">Welcome to \nBauuss</string>
+    <string name="log_in">Log in</string>
+    <string name="email_adress">Email Address</string>
+    <string name="password_adress">Password</string>
+    <string name="forget_password">Forgot Password?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="hideIcon">TODO</string>
+    <string name="username">Username</string>
+    <string name="example_email">example@example.com</string>
+    <string name="_8_charachters">8+ characters</string>
+    <string name="todo">TODO</string>
+    <string name="toast_info">Alanlar boş bırakılamaz ve en az şifre 8 karakter olmalıdır.</string>
+</resources>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".SignUpActivity">
+
+
+        <ImageButton
+            android:id="@+id/back_stack_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#00525252"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/backstackarrow"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/regular_monst"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            android:textSize="42sp"
+            android:textColor="@color/appPurpleColor"
+            android:layout_marginTop="26dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back_stack_ib" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_marginHorizontal = "33dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:srcCompat="@drawable/line" />
+
+        <LinearLayout
+            android:layout_marginHorizontal="33dp"
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/light_open"
+                android:text="@string/username"
+                android:textColor="@color/grayTextColor"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/username_et"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="@drawable/border_white_et"
+                android:paddingLeft="7dp"
+                android:textColor="@color/grayTextColor"
+                android:textSize="15sp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/light_open"
+                android:text="@string/email_adress"
+                android:textColor="@color/grayTextColor"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/email_adress_et"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="@drawable/border_white_et"
+                android:hint="@string/example_email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="7dp"
+                android:textColor="@color/grayTextColor"
+                android:textColorHint="#65525252"
+                android:textSize="12sp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/light_open"
+                android:text="@string/password_adress"
+                android:textColor="@color/grayTextColor"
+                android:textSize="15sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/password_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:autofillHints=""
+                    android:background="@drawable/border_white_et"
+                    android:hint="@string/_8_charachters"
+                    android:inputType="textPassword"
+                    android:paddingStart="6dp"
+                    android:paddingLeft="7dp"
+                    android:textColor="@color/grayTextColor"
+                    android:textColorHint="#65525252"
+                    android:textSize="12sp"
+                    tools:ignore="LabelFor,RtlSymmetry,TouchTargetSizeCheck" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="313dp"
+                    android:contentDescription="@string/hideIcon"
+                    android:foregroundGravity="right"
+                    android:src="@drawable/hideicon" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginHorizontal="33dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/button_background_purple"
+            android:fontFamily="@font/regular_open"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="47dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_button"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/cityscapes_town" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+</layout>
