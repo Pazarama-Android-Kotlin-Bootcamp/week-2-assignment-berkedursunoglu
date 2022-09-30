@@ -42,9 +42,10 @@ class SignUpActivity : AppCompatActivity() {
             }else{
                 //A toast message that informs the user that the entered data does not match.
                 Toast.makeText(this, R.string.toast_info, Toast.LENGTH_LONG).show()
-            }
-            
-          binding.ivShowPassword.setOnClickListener {
+            } 
+        }
+        
+         binding.ivShowPassword.setOnClickListener {
             //Controlling the state of the view and taking action when the user clicks on the view.
             if(isVisibilityOn){
                 //Showing the show password image and getting the variable false.
@@ -55,7 +56,6 @@ class SignUpActivity : AppCompatActivity() {
                 binding.ivShowPassword.setImageResource(R.drawable.hide_password)
                 isVisibilityOn = true
             }
-        }
         }
 
         //The code block where the request to switch to the previous activity is listened.
