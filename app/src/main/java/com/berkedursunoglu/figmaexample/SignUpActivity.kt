@@ -9,6 +9,8 @@ import com.berkedursunoglu.figmaexample.databinding.ActivitySignUpBinding
 class SignUpActivity : AppCompatActivity() {
     ////Variable definition for performing data bindings using the DataBinding library.
     private lateinit var binding : ActivitySignUpBinding
+     //boolean variable for password show hide
+    private var isVisibilityOn = false
 
     //Initialization of variables to pass the data entered by the user in the edittext.
     var userName = ""
@@ -42,13 +44,16 @@ class SignUpActivity : AppCompatActivity() {
                 Toast.makeText(this, R.string.toast_info, Toast.LENGTH_LONG).show()
             }
             
-             //Scope of actions to be taken when user clicks password hide button.
-        binding.ivShowPassword.setOnClickListener {
+          binding.ivShowPassword.setOnClickListener {
             //Controlling the state of the view and taking action when the user clicks on the view.
-            if (binding.ivShowPassword.id == R.drawable.show_password){
-                binding.ivShowPassword.setImageResource(R.drawable.hide_password)
-            }else{
+            if(isVisibilityOn){
+                //Showing the show password image and getting the variable false.
                 binding.ivShowPassword.setImageResource(R.drawable.show_password)
+                isVisibilityOn = false
+            }else{
+                //Showing the hide password image and getting the variable true.
+                binding.ivShowPassword.setImageResource(R.drawable.hide_password)
+                isVisibilityOn = true
             }
         }
         }
