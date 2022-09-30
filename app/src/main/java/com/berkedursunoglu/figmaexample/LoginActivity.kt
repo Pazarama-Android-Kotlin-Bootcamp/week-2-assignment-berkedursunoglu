@@ -13,6 +13,8 @@ import com.berkedursunoglu.figmaexample.databinding.ActivityLoginBinding
 class LoginActivity : AppCompatActivity() {
     //Variable definition for performing data bindings using the DataBinding library.
     private lateinit var binding: ActivityLoginBinding
+    //boolean variable for password show hide
+    private var isVisibilityOn = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,10 +47,14 @@ class LoginActivity : AppCompatActivity() {
          //Scope of actions to be taken when user clicks password hide button.
         binding.ivShowPassword.setOnClickListener {
             //Controlling the state of the view and taking action when the user clicks on the view.
-            if (binding.ivShowPassword.id == R.drawable.show_password){
-                binding.ivShowPassword.setImageResource(R.drawable.hide_password)
-            }else{
+            if(isVisibilityOn){
+                //Showing the show password image and getting the variable false.
                 binding.ivShowPassword.setImageResource(R.drawable.show_password)
+                isVisibilityOn = false
+            }else{
+                //Showing the hide password image and getting the variable true.
+                binding.ivShowPassword.setImageResource(R.drawable.hide_password)
+                isVisibilityOn = true
             }
         }
     }
