@@ -41,5 +41,15 @@ class LoginActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG).show()
             }
         }
+        
+         //Scope of actions to be taken when user clicks password hide button.
+        binding.ivShowPassword.setOnClickListener {
+            //Controlling the state of the view and taking action when the user clicks on the view.
+            if (binding.ivShowPassword.id == R.drawable.show_password){
+                binding.ivShowPassword.setImageResource(R.drawable.hide_password)
+            }else{
+                binding.ivShowPassword.setImageResource(R.drawable.show_password)
+            }
+        }
     }
 }
