@@ -117,15 +117,16 @@
                     android:background="@drawable/border_white_et"
                     tools:ignore="LabelFor,RtlSymmetry"
                     android:autofillHints="" />
-
+                
                 <ImageView
-                    android:layout_width="24dp"
+                    android:id="@+id/ivShowPassword"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/hideicon"
-                    android:foregroundGravity="right"
-                    android:layout_marginStart="313dp"
-                    android:contentDescription="@string/hideIcon" />
+                    android:layout_gravity="center_vertical|end"
+                    android:src="@drawable/show_password"
+                    android:layout_marginEnd="11dp"
+                    android:contentDescription="@string/todo" />
+                
             </FrameLayout>
 
         </LinearLayout>
