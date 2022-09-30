@@ -128,14 +128,14 @@
                     android:textSize="12sp"
                     tools:ignore="LabelFor,RtlSymmetry,TouchTargetSizeCheck" />
 
-                <ImageView
-                    android:layout_width="24dp"
+               <ImageView
+                    android:id="@+id/ivShowPassword"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="313dp"
-                    android:contentDescription="@string/hideIcon"
-                    android:foregroundGravity="right"
-                    android:src="@drawable/hideicon" />
+                    android:layout_gravity="center_vertical|end"
+                    android:src="@drawable/show_password"
+                    android:layout_marginEnd="11dp"
+                    android:contentDescription="@string/todo" />
             </FrameLayout>
         </LinearLayout>
 
