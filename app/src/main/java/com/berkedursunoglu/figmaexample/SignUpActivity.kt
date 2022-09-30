@@ -41,6 +41,16 @@ class SignUpActivity : AppCompatActivity() {
                 //A toast message that informs the user that the entered data does not match.
                 Toast.makeText(this, R.string.toast_info, Toast.LENGTH_LONG).show()
             }
+            
+             //Scope of actions to be taken when user clicks password hide button.
+        binding.ivShowPassword.setOnClickListener {
+            //Controlling the state of the view and taking action when the user clicks on the view.
+            if (binding.ivShowPassword.id == R.drawable.show_password){
+                binding.ivShowPassword.setImageResource(R.drawable.hide_password)
+            }else{
+                binding.ivShowPassword.setImageResource(R.drawable.show_password)
+            }
+        }
         }
 
         //The code block where the request to switch to the previous activity is listened.
